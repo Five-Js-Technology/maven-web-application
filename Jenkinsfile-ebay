@@ -7,8 +7,8 @@ git credentialsId: 'GitHUB-CREDENTIALS', url: 'https://github.com/Landmark-Techn
   stage('2-mavenBuild') {
      sh "${mavenHome}/bin/mvn clean package"
   }
-  stage('3-CodeQuality') {
-sh "${mavenHome}/bin/mvn sonar:sonar"
+ stage('3-CodeQuality') {
+// sh "${mavenHome}/bin/mvn sonar:sonar"
 }
 stage('4-UploadArticats') {
 sh "${mavenHome}/bin/mvn deploy"
